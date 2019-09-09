@@ -2,24 +2,36 @@ var winScore = 0
 var LooseScore = 0
 var tieScore = 0
 
-document.write('<h1>Wins: </h1>');
-document.write('<h1>Losses: </h1>');
-document.write('<h1>Ties: </h1>');
-document.write('<h1>Guesses Left: </h1>');
-
+var playerChoiceText = document.getElementById("playerChoiceText");
+var compChoicesText = document.getElementById("compChoicesText");
+var winsText = document.getElementById("winsText");
+var lossesText = document.getElementById("lossesText")
 
 
 var compChoices = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-function myGuess() {
-  var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-  var userGuess = document.onkeyup;
 
-    if (userGuess === compGuess) {
-      document.write("You're correct")
+document.onkeyup = function(event) {
+
+  var playerGuess = event.key;
+
+  var compChoices = compChoices[Math.floor(Math.random() * compChoices.length)];
+
+  if (playerGuess === compChoices) {
+    (i = 0, i < compChoices.lenght, i++);
+    console.log("Player win"); {
+      wins++;
+      else {
+        lossses++;
+      }
+
+      playerChoiceText.textcontent = "You chose: " + playerGuess;
+      compChoicesText.texContent = "The computer chose: " + compGuess;
+      winsText.textContent = "Wins: " + wins;
+      lossesText.textContent = "Losses: " + losses;
     }
+  }
 }
-
 
 
   
