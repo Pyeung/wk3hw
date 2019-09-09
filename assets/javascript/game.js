@@ -1,14 +1,22 @@
-document.getElementById("guessLeft").innerHTML = 9;
+var winScore = 0
+var LooseScore = 0
+var tieScore = 0
+
+
+
+
 
 var compChoices = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-document.onkeyup = function(event) {
-    
-    var userGuess = event.key;
+function myGuess() {
+  var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+  var userGuess = document.onkeyup;
 
-    var compGuess = compChoices[Math.floor(Math.random() * computerChoices.length)];
-
-    function userWins () {
-      for (i = 0, i < computerChoices, i++);
-      console.log("Wins");
+    if (userGuess === compGuess) {
+      document.write("You're correct")
     }
+}
+
+
+
+  
