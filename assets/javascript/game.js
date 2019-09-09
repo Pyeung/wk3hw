@@ -2,7 +2,10 @@ var winScore = 0
 var LooseScore = 0
 var tieScore = 0
 
-
+document.write('<h1>Wins: </h1>');
+document.write('<h1>Losses: </h1>');
+document.write('<h1>Ties: </h1>');
+document.write('<h1>Guesses Left: </h1>');
 
 
 
