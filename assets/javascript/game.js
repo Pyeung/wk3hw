@@ -18,14 +18,15 @@ document.onkeyup = function(event) {
   var compChoices = compChoices[Math.floor(Math.random() * compChoices.length)];
 
   if (playerGuess === compChoices) {
-    (i = 0, i < compChoices.lenght, i++);
+
+     (i = 0, i < compChoices.length, i++);
     console.log("Player win"); {
       wins++;
-      else {
-        lossses++;
-      }
+      // else {
+      //   lossses++;
+      // }
 
-      playerChoiceText.textcontent = "You chose: " + playerGuess;
+      playerChoiceText.textContent = "You chose: " + playerGuess;
       compChoicesText.texContent = "The computer chose: " + compGuess;
       winsText.textContent = "Wins: " + wins;
       lossesText.textContent = "Losses: " + losses;
