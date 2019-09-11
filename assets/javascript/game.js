@@ -17,19 +17,16 @@ document.onkeyup = function(event) {
 
   var playerGuess = event.key;
 
-  // Attempted the match function below to get a randomize letter from the array, somewhere in there is broke the script
-
-  // var compChoices = compChoices[Math.floor(Math.random() * compChoices.length)];
+  var compGuess = compChoices[Math.floor(Math.random() * compChoices.length)];
 
 
   // Below I tried to match player guess to computer choice in array, it does not work
 
-  if (playerGuess === compChoices.length) {
+  if ((playerGuess === compChoices.length)) {
 
 
-    // 
-     (i = 0, i < compChoices.length, i++);
-    console.log('Player guess is ', compChoices[i]); {
+    if (i = 0, i < compChoices.length, i++);
+    console.log('Player guess is ', playerGuess); {
       wins++;
       // else {
       //   lossses++;
@@ -38,14 +35,14 @@ document.onkeyup = function(event) {
 
       // Attempted to add text content to get by ID, something is not connecting. Nothing show on the HTML side
 
-      titleText.textContent = "<h1>The Psychic Game!</h1>";
+      titleText.textContent = "The Psychic Game!";
       playerChoiceText.textContent = "You chose: " + playerGuess;
       compChoicesText.texContent = "The computer chose: " + compGuess;
       winsText.textContent = "Wins: " + wins;
       lossesText.textContent = "Losses: " + losses;
     }
-  }
-// }
+  };
+
 
 
   
