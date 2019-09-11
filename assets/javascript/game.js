@@ -16,14 +16,14 @@ var compChoices = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "
 document.onkeyup = function(event) {
 
   var playerGuess = event.key;
+  console.log(playerGuess)
 
   var compGuess = compChoices[Math.floor(Math.random() * compChoices.length)];
-
+  console.log(compGuess)
 
   // Below I tried to match player guess to computer choice in array, it does not work
 
-  if ((playerGuess === compChoices.length)) {
-
+  if ((playerGuess === compGuess)) {
 
     if (i = 0, i < compChoices.length, i++);
     console.log('Player guess is ', playerGuess); {
