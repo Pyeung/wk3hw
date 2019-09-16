@@ -1,6 +1,13 @@
 
-var winScore = 0
-var LooseScore = 0
+var game = {
+  wins: 0,
+  losses: 0,
+  playerGuess: undefined,
+  compGuess: undefined
+};
+
+//var wins = 10
+//var losses = 5
 var tieScore = 0
 
 var titleText = document.getElementById("titleText");
@@ -13,36 +20,25 @@ var lossesText = document.getElementById("lossesText")
 var compChoices = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 
-document.onkeyup = function(event) {
+document.onkeyup = function (event) {
 
-  var playerGuess = event.key;
-  console.log(playerGuess)
+  game.playerGuess = event.key.toUpperCase();
+  console.log(game.playerGuess)
 
-  var compGuess = compChoices[Math.floor(Math.random() * compChoices.length)];
-  console.log(compGuess)
-
-  // Below I tried to match player guess to computer choice in array, it does not work
-
-  if ((playerGuess === compGuess)) {
-
-    if (i = 0, i < compChoices.length, i++);
-    console.log('Player guess is ', playerGuess); {
-      wins++;
-      // else {
-      //   lossses++;
-      }
-
-
-      // Attempted to add text content to get by ID, something is not connecting. Nothing show on the HTML side
-
-      titleText.textContent = "The Psychic Game!";
-      playerChoiceText.textContent = "You chose: " + playerGuess;
-      compChoicesText.texContent = "The computer chose: " + compGuess;
-      winsText.textContent = "Wins: " + wins;
-      lossesText.textContent = "Losses: " + losses;
-    }
-  };
+  game.compGuess = compChoices[Math.floor(Math.random() * compChoices.length)];
+  console.log(game.compGuess)
 
 
 
-  
+  if (game.playerGuess === game.compGuess) {
+    game.wins++;
+    updateDOM("Found Match!", game);
+
+  } else {
+    game.losses++;
+    updateDOM("No Match!", game);
+  }
+
+};
+
+updateDOM("Play the game!", game);
