@@ -15,7 +15,8 @@ var playerChoiceText = document.getElementById("playerChoiceText");
 var compChoicesText = document.getElementById("compChoicesText");
 var winsText = document.getElementById("winsText");
 var lossesText = document.getElementById("lossesText")
-
+var guessLeft = document.getElementById("Guess Left:")
+var count = 9
 
 var compChoices = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
@@ -40,5 +41,6 @@ document.onkeyup = function (event) {
   }
 
 };
+
 
 updateDOM("Play the game!", game);
